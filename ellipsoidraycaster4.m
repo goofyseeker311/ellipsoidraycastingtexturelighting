@@ -30,8 +30,8 @@ camerazbuffersphere = zeros(spherebufferwidth, spherebufferheight); camerargbabu
 ratio = pi/180; thetasteps = flip(-180:horizontalstep:180,2)*ratio; phisteps = (0:verticalstep:180)*ratio; rays = zeros(raycount,6); raycounter = 1;
 for theta=thetasteps; for phi=phisteps; rays(raycounter,:) = createLine3d(phi,theta); raycounter++; endfor; endfor; trays = (ones(raycount,1)*cv) .+ rays;
 
-[k, kn, kv, ku] = raysphereintersection(scenespheres(:,1:7), trays); m = max(kd);
-kd=k(:,1);kb=k(:,2); kc=zeros(raycount,3);kci=find(kb);kbi=kb(kci);kc(kci,:)=scenespheres(kbi,8:10);kx=kn(kci,1);ky=kn(kci,2);kz=kn(kci,3);kcicount=size(kci,1);knc=kn(kci,:);
+[k, kn, kv, ku] = raysphereintersection(scenespheres(:,1:7), trays); kd=k(:,1);kb=k(:,2); m = max(kd);
+kc=zeros(raycount,3);kci=find(kb);kbi=kb(kci);kc(kci,:)=scenespheres(kbi,8:10);kx=kn(kci,1);ky=kn(kci,2);kz=kn(kci,3);kcicount=size(kci,1);knc=kn(kci,:);
 k1=reshape((1-(kd./max(abs(kd))).^2),spherebufferheight,spherebufferwidth); renderim=zeros(spherebufferheight,spherebufferwidth,3); 
 kc1=reshape(kc(:,1),spherebufferheight,spherebufferwidth); kc2=reshape(kc(:,2),spherebufferheight,spherebufferwidth); kc3=reshape(kc(:,3),spherebufferheight,spherebufferwidth);
 kuv=ku(kci,:); kut=zeros(raycount,3); spx=round(kuv(:,2).*(wims(1)-1))+1; spy=round(kuv(:,1).*(wims(2)-1))+1; wimage1=wimage(:,:,1);wimage2=wimage(:,:,2);wimage3=wimage(:,:,3);
