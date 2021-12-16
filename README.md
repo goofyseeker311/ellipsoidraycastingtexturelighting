@@ -13,3 +13,5 @@ Ellipsoid Ray Casting with Textured Lighting in Fisheye View
 ![world116cE](https://user-images.githubusercontent.com/19920254/146284635-f8a5218f-34fe-4415-96f4-68ab371af4d6.jpg)
 ![Fondvulcain](https://user-images.githubusercontent.com/19920254/146284628-1ed35c1e-f177-44d4-8fcd-3a9a58705ad8.jpg)
 ![physical-world-map](https://user-images.githubusercontent.com/19920254/146284630-5072d351-7259-4303-bd83-ad0e0795bfd6.jpg)
+
+![testCCCA10](https://user-images.githubusercontent.com/19920254/146304341-a1181d6b-742b-49e0-98bb-2bd0a1aff22b.jpg)
